@@ -5,13 +5,22 @@
 #=================================================
 
 name: Build SailfishOS dhd
-
-on: 
+on:
   release:
     types: [published]
-  push:
-    branches: 
-      - master
+  repository_dispatch:
+  workflow_dispatch:
+    inputs:
+      set_example:
+        description: "example"
+        required: true
+        default: "hkdm"
+#on: 
+#  release:
+#   types: [published]
+#  push:
+#    branches: 
+#      - master
 
 jobs:
 
