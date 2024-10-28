@@ -3,7 +3,7 @@
 set -x
 
 source /home/mersdk/work/ci/ci/hadk.env
-export ANDROID_ROOT=/home/mersdk/work/ci/ci/hadk_16.1
+export ANDROID_ROOT=/home/mersdk/work/ci/ci/hadk_14.1
 
 sudo chown -R mersdk:mersdk $ANDROID_ROOT
 cd $ANDROID_ROOT
