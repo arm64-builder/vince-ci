@@ -21,8 +21,8 @@ jobs:
     env:
       DEVICE: vince
       VENDOR: xiaomi
-      ANDROID_ROOT: /home/runner/work/ci/ci/hadk_14.1/
-      SAILFISH_SDK_VERSION: 4.5.0.16
+      ANDROID_ROOT: /home/runner/work/ci/ci/hadk_16.1/
+      SAILFISH_SDK_VERSION: 5.0.0.21
 
     steps:
     - name: Maximize build space
@@ -64,7 +64,7 @@ jobs:
         source hadk.env
         mkdir -p $ANDROID_ROOT
         cd $ANDROID_ROOT
-        repo init -u https://github.com/mer-hybris/android.git -b hybris-14.1 --depth=1
+        repo init -u https://github.com/mer-hybris/android.git -b hybris-16.1 --depth=1
         repo sync -j8 -c --no-clone-bundle --no-tags
     
     - name: Clone device spec source
